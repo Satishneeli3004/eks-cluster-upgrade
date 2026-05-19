@@ -144,6 +144,11 @@ The control plane (API server, scheduler, controller manager) is managed by AWS 
 aws eks update-cluster-version \
   --name my-cluster \
   --kubernetes-version 1.35
+#check the progress of the status
+
+aws eks describe-update \
+  --name arka-cluster \
+  --update-id 46e37356-56ee-3730-9483-303ff67a2940
 ```
 
 **Via eksctl:**
