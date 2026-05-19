@@ -56,11 +56,13 @@ eksctl create cluster --name testing-cluster --version 1.34 --region ap-south-1 
 ```bash
 eksctl create cluster --name my-cluster --version 1.34 --region ap-south-1 --nodegroup-name my-ng-1 --node-type t2.medium --nodes 2 
 ```
+#Check node_group status:-
 ```bash
-#node_status:-
-aws eks describe-nodegroup   --cluster-name arka-cluster   --nodegroup-name arka-prod-node   --region ap-south-1   --query "nodegroup.status"
-#cluster_status:-
-aws eks describe-cluster   --name arka-cluster   --region ap-south-1   --query "cluster.status"
+  aws eks describe-nodegroup   --cluster-name testing-cluster   --nodegroup-name testing-prod-node   --region ap-south-1   --query "nodegroup.status"
+```
+#Check Cluster status:-
+```bash
+  aws eks describe-cluster   --name testing-cluster   --region ap-south-1   --query "cluster.status"
 ```
 
 ---
