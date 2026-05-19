@@ -47,10 +47,16 @@ sudo mv /tmp/eksctl /usr/local/bin
 ```
 
 - Create an EKS Cluster
+##Free-tier-account eligible instance type
+```bash
+eksctl create cluster --name testing-cluster --version 1.34 --region ap-south-1 --nodegroup-name testing-prod-node --node-type t3.small --nodes 2
+```
+# use above command or below to create the cluster and node
 
 ```bash
 eksctl create cluster --name my-cluster --version 1.34 --region ap-south-1 --nodegroup-name my-ng-1 --node-type t2.medium --nodes 2 
 ```
+
 
 ---
 
